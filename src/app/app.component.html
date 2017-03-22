@@ -1,10 +1,17 @@
-<app-header>
-  <img [src]="logo" [alt]="title" [width]='width'>
-  {{title}}
-  <app-search [placeholder]="placeholder"
-  (mySearch)="searchTerm = $event" ></app-search>
-</app-header>
+<h1>Ski Resorts Widget</h1>
+<div class="element">
+  <app-resorts-list [resortsList]="resortsList"
+                    [selectedResort]="selectedResort"
+                    (onResortSelect)="selectedResort = $event"
+                    (onPhotoSelect)="resortPhotoPath = $event"></app-resorts-list>
+  <div class="element-right">
+    <app-resorts-weather [resortTemperature]="selectedResort.temperature"></app-resorts-weather>
+    <app-resorts-details [resortPhotoPath]="resortPhotoPath"
+                         [selectedResort]="selectedResort"></app-resorts-details>
+  </div>
+  <div class="clear"> </div>
+</div>
 
-{{searchTerm}}
+
 
 

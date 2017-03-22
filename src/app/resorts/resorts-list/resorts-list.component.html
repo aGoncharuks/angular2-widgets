@@ -1,0 +1,93 @@
+<div class="element-left">
+  <div class="element-bg-img"><img [src]="'assets/images/' + selectedResort.photoNames[0] + '.jpg'" alt="" class="img-responsive"> </div>
+  <div class="element-left-bottom">
+    <div class="ele-strip">
+      <h3>Choose your ski resort</h3>
+    </div>
+    <!--TODO: replace with ngRepeat later-->
+    <div class="village">
+      <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+          <div class="activity-row" (click)="onResortSelect.emit(resortsList[0])">
+            <div class="activity-desc">
+              <h5>{{resortsList[0].name}}</h5>
+              <p>{{resortsList[0].country}}</p>
+              <h6>Elevation amplitude: {{resortsList[0].highestPoint - resortsList[0].lowestPoint}}m</h6>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li><img (mouseover)="selectPhoto(0, $event.target.src)" [src]="'assets/images/' + resortsList[0].photoNames[0] + '.jpg'"  alt=""/></li>
+                <li><img (mouseover)="selectPhoto(0, $event.target.src)" [src]="'assets/images/' + resortsList[0].photoNames[1] + '.jpg'"  alt=""/></li>
+              </ul>
+            </div>
+            <div class="clear"> </div>
+          </div>
+          <div class="activity-row" (click)="onResortSelect.emit(resortsList[1])">
+            <div class="activity-desc">
+              <div class="activity-desc">
+                <h5>{{resortsList[1].name}}</h5>
+                <p>{{resortsList[1].country}}</p>
+                <h6>Elevation amplitude: {{resortsList[1].highestPoint - resortsList[1].lowestPoint}}m</h6>
+              </div>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li><img (mouseover)="selectPhoto(1, $event.target.src)" [src]="'assets/images/' + resortsList[1].photoNames[0] + '.jpg'"  alt=""/></li>
+                <li><img (mouseover)="selectPhoto(1, $event.target.src)" [src]="'assets/images/' + resortsList[1].photoNames[1] + '.jpg'"  alt=""/></li>
+              </ul>
+            </div>
+            <div class="clear"> </div>
+          </div>
+          <div class="activity-row" (click)="onResortSelect.emit(resortsList[2])">
+            <div class="activity-desc">
+              <div class="activity-desc">
+                <h5>{{resortsList[2].name}}</h5>
+                <p>{{resortsList[2].country}}</p>
+                <h6>Elevation amplitude: {{resortsList[2].highestPoint - resortsList[2].lowestPoint}}m</h6>
+              </div>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li><img (mouseover)="selectPhoto(2, $event.target.src)" [src]="'assets/images/' + resortsList[2].photoNames[0] + '.jpg'"  alt=""/></li>
+                <li><img (mouseover)="selectPhoto(2, $event.target.src)" [src]="'assets/images/' + resortsList[2].photoNames[1] + '.jpg'"  alt=""/></li>
+              </ul>
+            </div>
+            <div class="clear"> </div>
+          </div>
+          <div class="activity-row" (click)="onResortSelect.emit(resortsList[3])">
+            <div class="activity-desc">
+              <div class="activity-desc">
+                <h5>{{resortsList[3].name}}</h5>
+                <p>{{resortsList[3].country}}</p>
+                <h6>Elevation amplitude: {{resortsList[3].highestPoint - resortsList[3].lowestPoint}}m</h6>
+              </div>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li><img (mouseover)="selectPhoto(3, $event.target.src)" [src]="'assets/images/' + resortsList[3].photoNames[0] + '.jpg'"  alt=""/></li>
+                <li><img (mouseover)="selectPhoto(3, $event.target.src)" [src]="'assets/images/' + resortsList[3].photoNames[1] + '.jpg'"  alt=""/></li>
+              </ul>
+            </div>
+            <div class="clear"> </div>
+          </div>
+          <div class="activity-row" (click)="onResortSelect.emit(resortsList[4])">
+            <div class="activity-desc">
+              <div class="activity-desc">
+                <h5>{{resortsList[4].name}}</h5>
+                <p>{{resortsList[4].country}}</p>
+                <h6>Elevation amplitude: {{resortsList[4].highestPoint - resortsList[4].lowestPoint}}m</h6>
+              </div>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li><img (mouseover)="selectPhoto(4, $event.target.src)" [src]="'assets/images/' + resortsList[4].photoNames[0] + '.jpg'"  alt=""/></li>
+                <li><img (mouseover)="selectPhoto(4, $event.target.src)" [src]="'assets/images/' + resortsList[4].photoNames[1] + '.jpg'"  alt=""/></li>
+              </ul>
+            </div>
+            <div class="clear"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
