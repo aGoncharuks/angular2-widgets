@@ -1,4 +1,4 @@
-type resort = {
+type Resort = {
   id: number;
   name: string,
   country: string,

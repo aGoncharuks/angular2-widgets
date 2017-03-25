@@ -4,10 +4,12 @@ import { CommonModule } from '@angular/common';
 import { ResortsListComponent } from './resorts-list/resorts-list.component';
 import { ResortsWeatherComponent } from './resorts-weather/resorts-weather.component';
 import { ResortsDetailsComponent } from './resorts-details/resorts-details.component';
+import { PropertyFilterPipe } from './../common/pipes/property-filter.pipe';
+import { ImagePathPipe } from './../common/pipes/image-path.pipe';
 
 @NgModule({
   imports: [
-    CommonModule,
+    CommonModule
   ],
   exports: [
     ResortsListComponent,
@@ -17,7 +19,9 @@ import { ResortsDetailsComponent } from './resorts-details/resorts-details.compo
   declarations: [
     ResortsListComponent,
     ResortsWeatherComponent,
-    ResortsDetailsComponent
+    ResortsDetailsComponent,
+    PropertyFilterPipe,
+    ImagePathPipe
   ]
 })
 export class ResortsModule { }

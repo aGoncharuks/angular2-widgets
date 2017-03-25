@@ -3,15 +3,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-resorts-list',
   templateUrl: './resorts-list.component.html',
-  styleUrls: ['./resorts-list.component.css']
+  styleUrls: ['./resorts-list.component.scss']
 })
 export class ResortsListComponent {
+  public selectedCountry: string;
 
   @Input()
-  public resortsList: [resort];
+  public resortsList: Resort[];
 
   @Input()
-  public selectedResort: resort;
+  public selectedResort: Resort;
 
   @Output()
   public onResortSelect: EventEmitter<{}> = new EventEmitter();
